@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E26a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="I0A-1s-oHG">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Item 2-->
+        <scene sceneID="vh9-OY-2UO">
+            <objects>
+                <viewController id="BxV-1c-R2e" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TvZ-E9-HOm"/>
+                        <viewControllerLayoutGuide type="bottom" id="9MJ-MT-O08"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3LG-Id-3Fo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="i0y-uZ-maM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1iA-B6-7p4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="974" y="767"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="C5G-2U-hMZ">
+            <objects>
+                <viewController id="QU3-eg-Tzi" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UPz-UM-73R"/>
+                        <viewControllerLayoutGuide type="bottom" id="RYX-dI-beL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JFc-Px-j3I">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="xTH-kq-hwG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4LH-wK-rgW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="974" y="105"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="x7G-qN-GhH">
+            <objects>
+                <tabBarController id="I0A-1s-oHG" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="jYP-w0-KPP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="QU3-eg-Tzi" kind="relationship" relationship="viewControllers" id="C2v-Jg-Z7T"/>
+                        <segue destination="BxV-1c-R2e" kind="relationship" relationship="viewControllers" id="lYw-FP-qpf"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c4F-hi-2QA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="154" y="436"/>
+        </scene>
+    </scenes>
+</document>
