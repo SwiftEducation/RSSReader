@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Top Album-->
         <scene sceneID="vh9-OY-2UO">
             <objects>
                 <viewController id="BxV-1c-R2e" sceneMemberID="viewController">
@@ -17,13 +17,51 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="i0y-uZ-maM"/>
+                    <tabBarItem key="tabBarItem" title="Top Album" image="Top Album Icon" id="i0y-uZ-maM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1iA-B6-7p4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="974" y="767"/>
         </scene>
-        <!--Item 1-->
+        <!--Top App-->
+        <scene sceneID="hFF-j6-YDe">
+            <objects>
+                <viewController id="IPi-OC-tMc" userLabel="Top App" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fo8-KI-kt2"/>
+                        <viewControllerLayoutGuide type="bottom" id="A3Y-KC-ClJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UR5-PV-IRN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Top App" image="Top App Icon" id="L2w-Fc-KxS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I3N-F1-d5t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1713" y="105"/>
+        </scene>
+        <!--Top Movie-->
+        <scene sceneID="5Y4-Sd-q8g">
+            <objects>
+                <viewController id="hQR-gq-2vX" userLabel="Top Movie" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OgK-9w-53C"/>
+                        <viewControllerLayoutGuide type="bottom" id="Igf-5R-Z0x"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MB9-P9-Nfk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Top Movie" image="Top Movie Icon" id="Djx-JE-ali"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dSp-9e-tUq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1713" y="767"/>
+        </scene>
+        <!--Top Song-->
         <scene sceneID="C5G-2U-hMZ">
             <objects>
                 <viewController id="QU3-eg-Tzi" sceneMemberID="viewController">
@@ -36,7 +74,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="xTH-kq-hwG"/>
+                    <tabBarItem key="tabBarItem" title="Top Song" image="Top Song Icon" id="xTH-kq-hwG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4LH-wK-rgW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -55,6 +93,8 @@
                     <connections>
                         <segue destination="QU3-eg-Tzi" kind="relationship" relationship="viewControllers" id="C2v-Jg-Z7T"/>
                         <segue destination="BxV-1c-R2e" kind="relationship" relationship="viewControllers" id="lYw-FP-qpf"/>
+                        <segue destination="IPi-OC-tMc" kind="relationship" relationship="viewControllers" id="N9b-qQ-ULA"/>
+                        <segue destination="hQR-gq-2vX" kind="relationship" relationship="viewControllers" id="Fn6-cI-YKS"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c4F-hi-2QA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -62,4 +102,10 @@
             <point key="canvasLocation" x="154" y="436"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Top Album Icon" width="28" height="28"/>
+        <image name="Top App Icon" width="18" height="28"/>
+        <image name="Top Movie Icon" width="22" height="28"/>
+        <image name="Top Song Icon" width="17" height="29"/>
+    </resources>
 </document>
