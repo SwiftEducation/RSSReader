@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F9674BD21B4859DC00A1FF8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9674BD01B4859DC00A1FF8B /* Main.storyboard */; };
+		F989C6D61B4B2184006B591D /* TopMediaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F989C6D51B4B2184006B591D /* TopMediaController.swift */; };
 		F9B18B301B45EF600021AFE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B18B2F1B45EF600021AFE5 /* AppDelegate.swift */; };
 		F9B18B371B45EF600021AFE5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9B18B361B45EF600021AFE5 /* Images.xcassets */; };
 		F9B18B3A1B45EF600021AFE5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9B18B381B45EF600021AFE5 /* LaunchScreen.xib */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		F9674BD11B4859DC00A1FF8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F989C6D51B4B2184006B591D /* TopMediaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopMediaController.swift; sourceTree = "<group>"; };
 		F9B18B2A1B45EF600021AFE5 /* RSSReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9B18B2E1B45EF600021AFE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9B18B2F1B45EF600021AFE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				F9B18B2F1B45EF600021AFE5 /* AppDelegate.swift */,
+				F989C6D51B4B2184006B591D /* TopMediaController.swift */,
 				F9674BD01B4859DC00A1FF8B /* Main.storyboard */,
 				F9B18B361B45EF600021AFE5 /* Images.xcassets */,
 				F9B18B381B45EF600021AFE5 /* LaunchScreen.xib */,
@@ -209,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F989C6D61B4B2184006B591D /* TopMediaController.swift in Sources */,
 				F9B18B301B45EF600021AFE5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
