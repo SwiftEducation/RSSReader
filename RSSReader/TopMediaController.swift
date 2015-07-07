@@ -13,9 +13,11 @@ class TopMediaController: UIViewController {
     @IBOutlet weak var artistLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBInspectable var titleText: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        titleLabel.text = "Media Title"
+        titleLabel.text = titleText
     }
     
     override func didReceiveMemoryWarning() {
