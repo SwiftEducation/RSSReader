@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="I0A-1s-oHG">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Top Album-->
@@ -16,13 +17,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWu-IW-WdC">
-                                <rect key="frame" x="268" y="28" width="63" height="45"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vWu-IW-WdC">
+                                <rect key="frame" x="16" y="28" width="568" height="45"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="38"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="web-Ts-KPm">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="web-Ts-KPm">
                                 <rect key="frame" x="283" y="80.5" width="35.5" height="20.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -42,8 +43,10 @@
                             <constraint firstItem="web-Ts-KPm" firstAttribute="top" secondItem="vWu-IW-WdC" secondAttribute="bottom" constant="8" id="2vA-N4-E2z"/>
                             <constraint firstAttribute="centerX" secondItem="web-Ts-KPm" secondAttribute="centerX" id="AcX-HF-azA"/>
                             <constraint firstItem="vWu-IW-WdC" firstAttribute="top" secondItem="TvZ-E9-HOm" secondAttribute="bottom" constant="8" id="KMT-Ch-Uwz"/>
+                            <constraint firstItem="vWu-IW-WdC" firstAttribute="trailing" secondItem="3LG-Id-3Fo" secondAttribute="trailingMargin" id="LTo-8z-5i6"/>
                             <constraint firstAttribute="centerX" secondItem="vWu-IW-WdC" secondAttribute="centerX" id="NS8-Qa-xBV"/>
                             <constraint firstAttribute="centerX" secondItem="3Ao-fS-4la" secondAttribute="centerX" id="eyJ-WF-hK9"/>
+                            <constraint firstItem="vWu-IW-WdC" firstAttribute="leading" secondItem="3LG-Id-3Fo" secondAttribute="leadingMargin" id="hJb-Hf-UYx"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Top Album" image="Top Album Icon" id="i0y-uZ-maM"/>
@@ -72,13 +75,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="64L-2f-sPp">
-                                <rect key="frame" x="268" y="28" width="63" height="45"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="64L-2f-sPp">
+                                <rect key="frame" x="16" y="28" width="568" height="45"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="38"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4q-OI-R4B">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4q-OI-R4B">
                                 <rect key="frame" x="283" y="81" width="35.5" height="20.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -94,9 +97,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="64L-2f-sPp" firstAttribute="leading" secondItem="UR5-PV-IRN" secondAttribute="leadingMargin" id="CFM-6U-C50"/>
                             <constraint firstItem="zG0-DA-Aq9" firstAttribute="top" secondItem="R4q-OI-R4B" secondAttribute="bottom" constant="8" id="OLd-mY-xQM"/>
                             <constraint firstItem="R4q-OI-R4B" firstAttribute="top" secondItem="64L-2f-sPp" secondAttribute="bottom" constant="8" id="Si5-6R-fWb"/>
                             <constraint firstAttribute="centerX" secondItem="zG0-DA-Aq9" secondAttribute="centerX" id="TDo-cH-0ye"/>
+                            <constraint firstItem="64L-2f-sPp" firstAttribute="trailing" secondItem="UR5-PV-IRN" secondAttribute="trailingMargin" id="VU2-v3-tC7"/>
                             <constraint firstItem="64L-2f-sPp" firstAttribute="top" secondItem="Fo8-KI-kt2" secondAttribute="bottom" constant="8" id="Z6z-xO-0Na"/>
                             <constraint firstAttribute="centerX" secondItem="R4q-OI-R4B" secondAttribute="centerX" id="b85-xc-JR2"/>
                             <constraint firstAttribute="centerX" secondItem="64L-2f-sPp" secondAttribute="centerX" id="o0Q-8d-eGI"/>
@@ -128,13 +133,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfy-df-G1f">
-                                <rect key="frame" x="268" y="28" width="63" height="45"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dfy-df-G1f">
+                                <rect key="frame" x="16" y="28" width="568" height="45"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="38"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJX-rC-swJ">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJX-rC-swJ">
                                 <rect key="frame" x="283" y="80.5" width="35.5" height="20.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -150,9 +155,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="dfy-df-G1f" firstAttribute="trailing" secondItem="MB9-P9-Nfk" secondAttribute="trailingMargin" id="0yY-Fw-74m"/>
                             <constraint firstItem="dfy-df-G1f" firstAttribute="top" secondItem="OgK-9w-53C" secondAttribute="bottom" constant="8" id="8Vr-xg-uX5"/>
                             <constraint firstAttribute="centerX" secondItem="iJX-rC-swJ" secondAttribute="centerX" id="AWK-Rs-jNz"/>
                             <constraint firstAttribute="centerX" secondItem="YCC-HS-DPj" secondAttribute="centerX" id="Ixx-nY-GNj"/>
+                            <constraint firstItem="dfy-df-G1f" firstAttribute="leading" secondItem="MB9-P9-Nfk" secondAttribute="leadingMargin" id="VoD-bv-SgT"/>
                             <constraint firstItem="YCC-HS-DPj" firstAttribute="top" secondItem="iJX-rC-swJ" secondAttribute="bottom" constant="8" id="kh2-Gi-E2U"/>
                             <constraint firstAttribute="centerX" secondItem="dfy-df-G1f" secondAttribute="centerX" id="pVx-Vd-N17"/>
                             <constraint firstItem="iJX-rC-swJ" firstAttribute="top" secondItem="dfy-df-G1f" secondAttribute="bottom" constant="8" id="wW7-by-vyA"/>
@@ -184,13 +191,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NfN-qL-fOs">
-                                <rect key="frame" x="268" y="28" width="63" height="45"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NfN-qL-fOs">
+                                <rect key="frame" x="16" y="28" width="568" height="45"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="38"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tHP-bi-PV5">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tHP-bi-PV5">
                                 <rect key="frame" x="283" y="80.5" width="35.5" height="20.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -210,7 +217,9 @@
                             <constraint firstAttribute="centerX" secondItem="L1Z-qX-0F9" secondAttribute="centerX" id="PHP-cK-wz3"/>
                             <constraint firstAttribute="centerX" secondItem="tHP-bi-PV5" secondAttribute="centerX" id="S9N-4l-ySu"/>
                             <constraint firstItem="L1Z-qX-0F9" firstAttribute="top" secondItem="tHP-bi-PV5" secondAttribute="bottom" constant="8" id="TOR-HC-U5s"/>
+                            <constraint firstItem="NfN-qL-fOs" firstAttribute="trailing" secondItem="JFc-Px-j3I" secondAttribute="trailingMargin" id="frf-mW-6fB"/>
                             <constraint firstItem="tHP-bi-PV5" firstAttribute="top" secondItem="NfN-qL-fOs" secondAttribute="bottom" constant="8" id="ltt-Me-mGi"/>
+                            <constraint firstItem="NfN-qL-fOs" firstAttribute="leading" secondItem="JFc-Px-j3I" secondAttribute="leadingMargin" id="nJv-Ix-kyu"/>
                             <constraint firstItem="NfN-qL-fOs" firstAttribute="top" secondItem="UPz-UM-73R" secondAttribute="bottom" constant="8" id="usc-Z0-8eE"/>
                         </constraints>
                     </view>
