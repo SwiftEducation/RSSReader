@@ -13,11 +13,10 @@ class TopMediaController: UIViewController {
     @IBOutlet weak var artistLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     
-    @IBInspectable var titleText: String!
+    @IBInspectable var feedURL: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let feedURL = "http://ax.itunes.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/topsongs/limit=1/json"
         let request = NSURLRequest(URL: NSURL(string: feedURL)!)
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { response, data, error in
             if let feed = NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers, error: nil) as? NSDictionary,

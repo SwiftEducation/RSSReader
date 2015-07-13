@@ -51,7 +51,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Top Album" image="Top Album Icon" id="i0y-uZ-maM"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Album Title"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="feedURL" value="http://ax.itunes.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/topalbums/limit=1/json"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="artistLabel" destination="web-Ts-KPm" id="Dy2-Ey-LdR"/>
@@ -109,7 +109,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Top App" image="Top App Icon" id="L2w-Fc-KxS"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="App Title"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="feedURL" value="http://ax.itunes.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/toppaidapplications/limit=1/json"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="artistLabel" destination="R4q-OI-R4B" id="KJp-I7-Uoe"/>
@@ -167,7 +167,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Top Movie" image="Top Movie Icon" id="Djx-JE-ali"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Movie Title"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="feedURL" value="http://ax.itunes.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/topMovies/limit=1/json"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="artistLabel" destination="iJX-rC-swJ" id="9PT-LA-gWc"/>
@@ -225,7 +225,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Top Song" image="Top Song Icon" id="xTH-kq-hwG"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Song Title"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="feedURL" value="http://ax.itunes.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/topsongs/limit=1/json"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="artistLabel" destination="tHP-bi-PV5" id="7HO-Ze-cjY"/>
