@@ -21,12 +21,25 @@ class TopMediaController: UIViewController {
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { response, data, error in
             if let feed = NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers, error: nil) as? NSDictionary,
                 title = feed.valueForKeyPath("feed.entry.im:name.label") as? String,
-                artist = feed.valueForKeyPath("feed.entry.im:artist.label") as? String {
+                artist = feed.valueForKeyPath("feed.entry.im:artist.label") as? String,
+                imageURLs = feed.valueForKeyPath("feed.entry.im:image") as? [NSDictionary] {
+                    if let imageURL = imageURLs.last,
+                        imageURLString = imageURL.valueForKeyPath("label") as? String {
+                            self.loadImageFromURL(NSURL(string:imageURLString)!)
+                    }
                 self.titleLabel.text = title
                 self.titleLabel.hidden = false
                 self.artistLabel.text = artist
                 self.artistLabel.hidden = false
+                
             }
+        }
+    }
+    
+    func loadImageFromURL(URL: NSURL) {
+        let request = NSURLRequest(URL: URL)
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { response, data, error in
+            self.imageView.image = UIImage(data: data)
         }
     }
     
