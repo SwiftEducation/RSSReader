@@ -19,7 +19,7 @@ class TopMediaController: UIViewController {
         super.viewDidLoad()
         let request = NSURLRequest(URL: NSURL(string: feedURL)!)
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { response, data, error in
-            if let feed = NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers, error: nil) as? NSDictionary,
+            if let feed = (try? NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers)) as? NSDictionary,
                 title = feed.valueForKeyPath("feed.entry.im:name.label") as? String,
                 artist = feed.valueForKeyPath("feed.entry.im:artist.label") as? String {
                 self.titleLabel.text = title
