@@ -20,7 +20,8 @@ class TopMediaController: UIViewController {
         let feedURL = "http://ax.itunes.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/topsongs/limit=1/json"
         let request = NSURLRequest(URL: NSURL(string: feedURL)!)
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { response, data, error in
-            if let feed = (try? NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers)) as? NSDictionary,
+            if let jsonData = data,
+                feed = (try? NSJSONSerialization.JSONObjectWithData(jsonData, options: .MutableContainers)) as? NSDictionary,
                 title = feed.valueForKeyPath("feed.entry.im:name.label") as? String,
                 artist = feed.valueForKeyPath("feed.entry.im:artist.label") as? String {
                 self.titleLabel.text = title
