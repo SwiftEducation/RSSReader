@@ -19,7 +19,8 @@ class TopMediaController: UIViewController {
         super.viewDidLoad()
         let request = NSURLRequest(URL: NSURL(string: feedURL)!)
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { response, data, error in
-            if let feed = (try? NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers)) as? NSDictionary,
+            if let jsonData = data,
+                feed = (try? NSJSONSerialization.JSONObjectWithData(jsonData, options: .MutableContainers)) as? NSDictionary,
                 title = feed.valueForKeyPath("feed.entry.im:name.label") as? String,
                 artist = feed.valueForKeyPath("feed.entry.im:artist.label") as? String,
                 imageURLs = feed.valueForKeyPath("feed.entry.im:image") as? [NSDictionary] {
@@ -39,7 +40,9 @@ class TopMediaController: UIViewController {
     func loadImageFromURL(URL: NSURL) {
         let request = NSURLRequest(URL: URL)
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { response, data, error in
-            self.imageView.image = UIImage(data: data!)
+            if let imageData = data {
+                self.imageView.image = UIImage(data: imageData)
+            }
         }
     }
     
