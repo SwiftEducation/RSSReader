@@ -7,4 +7,10 @@ This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAl
 
 import UIKit
 
-UIApplicationMain(Process.argc, Process.unsafeArgv, nil, NSStringFromClass(AppDelegate))
+UIApplicationMain(CommandLine.argc,
+                  UnsafeMutableRawPointer(CommandLine.unsafeArgv)
+                    .bindMemory(
+                        to: UnsafeMutablePointer<Int8>.self,
+                        capacity: Int(CommandLine.argc)),
+                  nil,  
+                  NSStringFromClass(AppDelegate.self))
