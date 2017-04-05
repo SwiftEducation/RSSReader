@@ -17,16 +17,16 @@ class TopMediaController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let request = NSURLRequest(URL: NSURL(string: feedURL)!)
-        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { response, data, error in
+        let request = URLRequest(url: URL(string: feedURL)!)
+        NSURLConnection.sendAsynchronousRequest(request, queue: OperationQueue.main) { response, data, error in
             if let jsonData = data,
-                feed = (try? NSJSONSerialization.JSONObjectWithData(jsonData, options: .MutableContainers)) as? NSDictionary,
-                title = feed.valueForKeyPath("feed.entry.im:name.label") as? String,
-                artist = feed.valueForKeyPath("feed.entry.im:artist.label") as? String {
+                let feed = (try? JSONSerialization.jsonObject(with: jsonData, options: .mutableContainers)) as? NSDictionary,
+                let title = feed.value(forKeyPath: "feed.entry.im:name.label") as? String,
+                let artist = feed.value(forKeyPath: "feed.entry.im:artist.label") as? String {
                 self.titleLabel.text = title
-                self.titleLabel.hidden = false
+                self.titleLabel.isHidden = false
                 self.artistLabel.text = artist
-                self.artistLabel.hidden = false
+                self.artistLabel.isHidden = false
             }
         }
     }
